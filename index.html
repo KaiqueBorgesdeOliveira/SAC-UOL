@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UOL SAC: atendimento online, tira-dúvidas sobre serviços e ajuda sobre produtos</title>
+    <meta name="description" content="UOL SAC: utilize o SAC do UOL para tirar suas dúvidas, recuperar sua senha, quitar seus débitos e ver informações de cobrança, de seus produtos e serviços. Veja mais!">
+    
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+</head>
+<body ng-app="uolsacApp" ng-controller="MainController">
+    <div class="container">
+        <nav class="top-nav">
+            <div class="top-nav-content">
+                <a href="https://www.uol.com.br" class="main-logo">
+                    <img src="https://sac.uol.com.br/uol.png" alt="UOL - O melhor conteúdo">
+                </a>
+                <div class="nav-links">
+                    <a href="#" class="nav-link">INGRESSO.COM</a>
+                    <a href="#" class="nav-link">UOL HOST</a>
+                    <a href="#" class="nav-link">PAGBANK</a>
+                    <a href="#" class="nav-link">CURSOS</a>
+                    <a href="#" class="nav-link">UOL PLAY</a>
+                    <a href="#" class="nav-link">UOL ADS</a>
+                </div>
+                <div class="user-actions">
+                    <a href="#" class="search-link">BUSCA</a>
+                    <a href="#" class="chat-link">BATE-PAPO</a>
+                    <a href="#" class="email-link">EMAIL</a>
+                </div>
+            </div>
+        </nav>
+
+        <header class="menu-header">
+            <div class="menu-header-content">
+                <div class="logo">
+                    <a href="/">
+                        <img src="assets/images/Logo SAC.svg" alt="SAC UOL">
+                    </a>
+                </div>
+                <nav>
+                    <a href="#">Home</a>
+                    <a href="#">Atendimento</a>
+                    <a href="#">Financeiro</a>
+                    <a href="#">Minha conta</a>
+                </nav>
+                <div class="right-menu">
+                    <a href="#" class="help-link">Ajuda</a>
+                    <a href="#" class="login-link">Entrar</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero-banner">
+                <div class="banner-carousel">
+                    <img src="assets/images/Banner.png" alt="Até 20% OFF em produtos LG">
+                </div>
+            </section>
+
+            <section class="quick-actions">
+                <div class="action-grid">
+                    <a href="#" class="action-item">
+                        <img src="assets/images/Icone-meios-de-pagamento-60x60px.svg" alt="Ícone Meus Débitos">
+                        <h3>Meus Débitos</h3>
+                    </a>
+                    <a href="#" class="action-item">
+                        <img src="assets/images/Icone-meus-produtos-60x60px.svg" alt="Ícone Meus Produtos">
+                        <h3>Meus Produtos</h3>
+                    </a>
+                    <a href="#" class="action-item">
+                        <img src="assets/images/Icone-extrato-60x60px.svg" alt="Ícone Meu Extrato">
+                        <h3>Meu Extrato</h3>
+                    </a>
+                    <a href="#" class="action-item">
+                        <img src="assets/images/Boleto.svg" alt="Ícone 2ª via de boleto">
+                        <h3>2ª via de boleto</h3>
+                    </a>
+                    <a href="#" class="action-item">
+                        <img src="assets/images/Icone-meios-de-pagamento-60x60px.svg" alt="Ícone Recuperar Senha">
+                        <h3>Recuperar Senha</h3>
+                    </a>
+                </div>
+            </section>
+
+            <section class="help-search">
+                <h2>Olá, como podemos te ajudar?</h2>
+                <div class="search-box">
+                    <input type="text" placeholder="Digite aqui a sua dúvida..." ng-model="searchQuery">
+                    <button type="button" ng-click="search(searchQuery)">Buscar</button>
+                </div>
+            </section>
+
+            <section class="app-download">
+                <div class="app-container">
+                    <div class="app-info">
+                        <img src="assets/images/Icone-meus-produtos-60x60px.svg" alt="Ícone do App Meu UOL">
+                        <div class="app-text">
+                            <h3>Baixe agora o App Meu UOL</h3>
+                            <p>e facilite seu dia a dia!</p>
+                        </div>
+                    </div>
+                    <div class="app-stores">
+                        <a href="https://play.google.com/store/apps/details?id=br.com.uol" target="_blank">
+                            <img src="assets/images/google-play-badge.png" alt="Disponível no Google Play" class="store-badge">
+                        </a>
+                        <a href="https://apps.apple.com/br/app/uol/id333529141" target="_blank">
+                            <img src="assets/images/app-store-badge.png" alt="Baixar na App Store" class="store-badge">
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html> 
