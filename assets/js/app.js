@@ -71,12 +71,13 @@ angular.element(document).ready(function() {
     let currentBanner = 0;
     const banners = [
         'assets/images/Banner.png',
-        'assets/images/Banner2.png',
-        'assets/images/Banner3.png'
+        'assets/images/1500_LG.png',
+        'assets/images/1500_dinner.png',
+        'assets/images/1500_bangers.png'
     ];
     
     function updateBanner() {
-        $('.banner-carousel img').fadeOut(500, function() {
+        $('#banner-image').fadeOut(500, function() {
             $(this).attr('src', banners[currentBanner]).fadeIn(500);
         });
     }
