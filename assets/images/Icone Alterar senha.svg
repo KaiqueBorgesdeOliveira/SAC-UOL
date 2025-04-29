@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+  <g id="Icone_Alterar_senha" data-name="Icone Alterar senha" transform="translate(22867 9807)">
+    <rect id="Retângulo" width="60" height="60" transform="translate(-22867 -9807)" fill="none"/>
+    <path id="Retângulo-2" data-name="Retângulo" d="M4,2A2,2,0,0,0,2,4V34a2,2,0,0,0,2,2H46a2,2,0,0,0,2-2V4a2,2,0,0,0-2-2H4M4,0H46a4,4,0,0,1,4,4V34a4,4,0,0,1-4,4H4a4,4,0,0,1-4-4V4A4,4,0,0,1,4,0Z" transform="translate(-22862 -9785)" fill="#e9b425"/>
+    <path id="Caminho" d="M76.939,36.309a3.738,3.738,0,0,0-2.024,6.88v4.435a2.021,2.021,0,1,0,4.041,0V43.194a3.738,3.738,0,0,0-2.018-6.885Z" transform="translate(-22914.201 -9809.309)" fill="#e9b425"/>
+    <path id="Subtração" d="M2.137,22H.042C.014,21.643,0,21.291,0,20.952v-8.38a12.5,12.5,0,1,1,25,0v3.142H22.917V12.572a10.416,10.416,0,1,0-20.832,0v8.38c0,.348.017.7.052,1.046Z" transform="translate(-22849 -9807)" fill="#e9b425"/>
+  </g>
+</svg>

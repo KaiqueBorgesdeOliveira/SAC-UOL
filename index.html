@@ -17,7 +17,7 @@
         <nav class="top-nav">
             <div class="top-nav-content">
                 <a href="https://www.uol.com.br" class="main-logo">
-                    <img src="assets/images/uol-logo.svg" alt="UOL">
+                    <img src="assets/images/Logo-Uol.png" alt="UOL">
                 </a>
                 <div class="nav-links">
                     <a href="#" class="nav-link">INGRESSO.COM</a>
@@ -50,21 +50,48 @@
         <header class="menu-header">
             <div class="menu-header-content">
                 <div class="logo">
-                    <a href="/"><img src="assets/images/sac.svg" alt="SAC UOL"></a>
+                    <a href="/"><img src="assets/images/Logo SAC.svg" alt="SAC UOL"></a>
                 </div>
                 <nav>
-                    <a href="#" class="active">Home</a>
-                    <a href="#">Atendimento</a>
-                    <a href="#">Financeiro</a>
-                    <a href="#">Minha conta</a>
+                    <ul style="display: flex; gap: 32px; margin-left: 48px; list-style: none; background: none; border: none;">
+                        <li><a href="#" class="active">Home</a></li>
+                        <li>
+                            <a href="#">Atendimento</a>
+                            <div class="dropdown-menu">
+                                <a href="#">Ajuda</a>
+                                <a href="#">Fale conosco</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Financeiro</a>
+                            <div class="dropdown-menu">
+                                <a href="#">Meus débitos</a>
+                                <a href="#">Meu extrato</a>
+                                <a href="#">2ª via de boleto a vencer</a>
+                                <a href="#">Meios de pagamento</a>
+                                <a href="#">Comprovante de quitação</a>
+                                <a href="#">Dados de recebimento</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Minha conta</a>
+                            <div class="dropdown-menu">
+                                <a href="#">Alterar senha</a>
+                                <a href="#">Meus dados</a>
+                                <a href="#">Meus benefícios</a>
+                                <a href="#">Meus produtos</a>
+                                <a href="#">Cartilha de segurança</a>
+                            </div>
+                        </li>
+                    </ul>
                 </nav>
                 <div class="right-menu">
                     <a href="#" class="help-link">
-                        <span class="material-icons">help_outline</span>
+                        <img src="assets/images/Icone-ajuda-28x28px.svg" alt="Ajuda" style="width:28px;height:28px;">
                         Ajuda
                     </a>
                     <a href="#" class="login-link">
-                        <span class="material-icons">person_outline</span>
+                        <img src="assets/images/Icone perfil.svg" alt="Perfil" style="width:28px;height:28px;">
                         {{userName}}
                     </a>
                 </div>
@@ -126,7 +153,7 @@
                         <h3>2ª via de boleto</h3>
                     </a>
                     <a href="#" class="action-item">
-                        <img src="assets/images/icon-senha.svg" alt="Ícone Recuperar Senha">
+                        <img src="assets/images/Icone Alterar senha.svg" alt="Ícone Recuperar Senha">
                         <h3>Recuperar Senha</h3>
                     </a>
                 </div>
