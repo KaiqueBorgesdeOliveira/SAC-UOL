@@ -1,52 +1,88 @@
-# SAC UOL - Clone
+# SAC-UOL Redesign
 
-Este é um clone da interface do SAC UOL, desenvolvido com HTML, CSS e JavaScript (AngularJS).
+> Projeto de redesign da interface do SAC UOL desenvolvido com React 19 + TypeScript
 
-## Estrutura do Projeto
+## 🚀 Visão Geral
+  Repositório para o desafio técnico de frontend, implementando melhorias na interface do Sistema de Atendimento ao Cliente UOL com foco em:
+  - **Performance**: Otimização de carregamento
+  - **Acessibilidade**: WCAG 2.1 AA
+  - **UX Moderna**: Padrões de design atualizados
 
-```
-.
-├── assets/
-│   ├── css/
-│   │   └── styles.css
-│   ├── js/
-│   │   ├── app.js
-│   │   └── vendor.js
-│   └── images/
-│       ├── logo-sac.png
-│       ├── icon-debitos.png
-│       ├── icon-produtos.png
-│       ├── icon-extrato.png
-│       ├── icon-boleto.png
-│       ├── icon-senha.png
-│       ├── banner1.jpg
-│       └── banner2.jpg
-├── index.html
-└── README.md
-```
+## 📦 Tecnologias Principais
+  [![React](https://img.shields.io/badge/React-19.1.0-blue)](https://react.dev/)
+  [![TypeScript](https://img.shields.io/badge/TypeScript-4.9.5-3178C6)](https://www.typescriptlang.org/)
+  [![Styled Components](https://img.shields.io/badge/Styled_Components-6.1.17-DB7093)](https://styled-components.com/)
 
-## Funcionalidades Implementadas
+## 🛠️ Configuração do Ambiente
 
-- Layout responsivo
-- Menu de navegação
-- Carrossel de banners
-- Grid de ações rápidas
-- Campo de busca
-- Loader para carregamento
-- Integração com AngularJS
+  ### Pré-requisitos
+  - Node.js ≥ 18.x
+  - npm ≥ 9.x
 
-## Dependências
+### Instalação
+    ```bash
+    
+    git clone [https://github.com/KaiqueBorgesdeOliveira/UOL-SAC-Redesign]
+    cd uol-redesign
+    npm install
 
-- AngularJS 1.x
-- Bootstrap (para alguns componentes)
-- jQuery (para algumas funcionalidades do Bootstrap)
+## Comandos Úteis
 
-## Como Executar
+   - Comando	Descrição
+   - npm start	Inicia servidor de desenvolvimento
+   - npm run build	Gera build para produção
+   - npm run type-check	Verifica tipos TypeScript
+   - npm run lint	Executa análise de código
+   - npm run format	Formata código automaticamente
 
-1. Clone este repositório
-2. Abra o arquivo `index.html` em um servidor web local
-3. O site deve estar funcionando corretamente
+## 🏗️ Estrutura do Projeto
+    ```plaintext
+    src/
+    ├── assets/            # Recursos estáticos (imagens, fonts)
+    ├── components/        # Componentes React
+    │   ├── sections/      # Seções da página (Header, Footer)
+    │   └── ui/            # Componentes UI (Button, Card)
+    ├── styles/            # Estilos globais e temas
+    │   ├── global.ts      # Configurações CSS globais
+    │   └── theme.ts       # Variáveis de design system
+    └── utils/             # Utilitários (formatters, helpers)
 
-## Observações
+## 🎨 Guia de Estilo
+  Cores Principais:
+  
+  #FF6600 (Laranja UOL)
+  
+  #333333 (Texto)
+  
+  #F5F5F5 (Fundo)
+  
+  Tipografia:
+  
+  'Segoe UI', sans-serif (Principal)
+  
+  14px base (Desktop)
 
-Este é um clone visual do SAC UOL, criado apenas para fins de estudo. As funcionalidades são simuladas e não há integração real com backend. 
+## 📌 Roadmap de Melhorias
+  Implementar modo escuro
+  
+  Adicionar internacionalização (i18n)
+  
+  Integrar com API real do UOL
+  
+  Adicionar testes E2E
+
+## 🤝 Como Contribuir
+  Faça um fork do projeto
+  
+  Crie sua branch (git checkout -b feature/nova-feature)
+  
+  Commit suas mudanças (git commit -m 'Adiciona nova feature')
+  
+  Push para a branch (git push origin feature/nova-feature)
+  
+  Abra um Pull Request
+
+## 📄 Licença
+  Este projeto está sob a licença MIT - veja o arquivo LICENSE para detalhes.
+  
+  Nota: Este README será atualizado conforme o projeto evolui. Última atualização: {{16/04/2025}}
