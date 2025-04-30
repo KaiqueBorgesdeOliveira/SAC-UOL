@@ -521,7 +521,7 @@ nav a:hover::after {
 .help-search {
     text-align: center;
     padding: 40px 0;
-    background: var(--uol-light-gray);
+    background: none;
 }
 
 .help-search h2 {
@@ -541,12 +541,13 @@ nav a:hover::after {
     border: 2px solid #E5E5E5;
     border-radius: 25px;
     font-size: 16px;
-    transition: border-color 0.3s;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .search-box input:focus {
     outline: none;
-    border-color: var(--uol-red);
+    border-color: #FFD200;
+    box-shadow: 0 2px 8px #ffe06633;
 }
 
 .search-box button {
@@ -557,7 +558,7 @@ nav a:hover::after {
     background: none;
     border: none;
     cursor: pointer;
-    color: var(--uol-gray);
+    color: #FFD200;
 }
 
 .search-suggestions {
@@ -598,9 +599,75 @@ nav a:hover::after {
 
 /* App Download */
 .app-download {
-    background: var(--uol-light-gray);
+    background: none;
     padding: 40px 0;
     margin: 40px 0;
+}
+
+.app-download-banner.novo-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #FFD200;
+    border-radius: 16px;
+    padding: 24px 32px;
+    margin: 0 auto;
+    max-width: 1100px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    gap: 32px;
+}
+
+.app-download-banner.novo-layout .qr-code {
+    width: 100px;
+    height: 100px;
+    margin: 0 32px 0 0;
+    flex-shrink: 0;
+}
+
+.app-download-center {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.app-download-center .icon-phone {
+    width: 56px;
+    height: 56px;
+    margin: 0;
+}
+
+.app-download-center .app-download-text {
+    font-size: 1.5rem;
+    color: #222;
+    font-weight: 400;
+    line-height: 1.3;
+    margin: 0;
+    min-width: 0;
+}
+
+.app-download-center .app-download-text strong,
+.app-download-center .app-download-text span {
+    font-weight: 700;
+}
+
+.app-download-center .app-download-text .subtitle {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.app-download-banner.novo-layout .app-download-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+    margin-left: 32px;
+}
+
+.app-download-banner.novo-layout .app-download-buttons img {
+    height: 54px;
+    width: auto;
+    display: block;
 }
 
 .app-container {
@@ -747,24 +814,79 @@ nav a:hover::after {
     margin: 24px 0;
 }
 
-.more-info button {
+.more-info-btn {
     display: inline-flex;
     align-items: center;
     gap: 6px;
     cursor: pointer;
-    text-decoration: underline;
-    color: #0645AD;
-    font-size: 16px;
-    position: relative;
     background: none;
     border: none;
-    padding: 0;
+    padding: 0 0 2px 0;
+    color: #0645AD;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    outline: none;
+    transition: color 0.2s;
 }
 
-.more-info button .material-icons {
-    font-size: 22px;
+.more-info-btn .more-info-text {
+    position: relative;
+    z-index: 2;
+    transition: color 0.2s;
+}
+
+.more-info-btn .more-info-icon {
+    font-size: 26px;
+    color: var(--uol-yellow);
+    margin-left: 2px;
+    transition: transform 0.3s cubic-bezier(.4,2,.6,1), color 0.2s;
     vertical-align: middle;
-    transition: transform 0.2s;
+    z-index: 2;
+}
+
+.more-info-btn .more-info-underline {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 3px;
+    background: var(--uol-yellow);
+    border-radius: 2px;
+    transform: scaleX(0.2);
+    opacity: 0.7;
+    transition: transform 0.3s cubic-bezier(.4,2,.6,1), opacity 0.2s;
+    z-index: 1;
+}
+
+.more-info-btn:hover,
+.more-info-btn:focus {
+    color: var(--uol-yellow);
+}
+
+.more-info-btn:hover .more-info-underline,
+.more-info-btn:focus .more-info-underline {
+    transform: scaleX(1);
+    opacity: 1;
+}
+
+.more-info-btn.open .more-info-icon {
+    transform: rotate(180deg);
+    color: var(--uol-yellow);
+}
+
+.more-info-btn.open .more-info-underline {
+    transform: scaleX(1);
+    opacity: 1;
+}
+
+@media (max-width: 480px) {
+    .more-info-btn {
+        font-size: 16px;
+    }
+    .more-info-btn .more-info-icon {
+        font-size: 22px;
+    }
 }
 
 /* Responsividade */
@@ -924,6 +1046,26 @@ nav a:hover::after {
     }
 }
 
+@media (max-width: 900px) {
+    .app-download-banner.novo-layout {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        padding: 18px 6px;
+    }
+    .app-download-banner.novo-layout .qr-code {
+        margin: 0 auto;
+    }
+    .app-download-center {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    .app-download-banner.novo-layout .app-download-buttons {
+        margin-left: 0;
+    }
+}
+
 .dropdown-menu {
     display: none;
     position: absolute;
@@ -964,4 +1106,88 @@ nav a:hover::after {
     background: none;
     color: var(--uol-yellow);
     font-weight: 500;
+}
+
+.faq-box, .banner-propagandas {
+    max-width: 900px;
+    margin: 32px auto 0 auto;
+}
+
+.faq-title, .produtos-title {
+    display: flex;
+    align-items: center;
+    font-size: 1.35rem;
+    font-weight: 500;
+    color: #333;
+    padding: 22px 28px 12px 0;
+    background: none;
+    position: relative;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+.faq-title-bar {
+    display: inline-block;
+    width: 6px;
+    height: 32px;
+    background: var(--uol-yellow);
+    border-radius: 4px;
+    margin-right: 16px;
+}
+
+.banner-propagandas {
+    background: none;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+}
+
+.produtos-nav {
+    margin-top: 0;
+}
+
+.faq-list {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 8px 0;
+}
+
+.faq-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.08rem;
+    color: #222;
+    padding: 16px 28px 16px 28px;
+    border-bottom: 1px solid #f2f2f2;
+    background: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-item:hover {
+    background: #FFF7D1;
+}
+
+.faq-item .material-icons {
+    color: var(--uol-yellow);
+    font-size: 22px;
+    margin-left: 12px;
+    transition: color 0.2s;
+}
+
+@media (max-width: 950px) {
+    .faq-box, .banner-propagandas {
+        max-width: 98vw;
+    }
+}
+
+input:active, input:focus, textarea:active, textarea:focus, select:active, select:focus {
+    border-color: #FFD200 !important;
+    box-shadow: 0 2px 8px #ffe06633;
+    outline: none;
 } 

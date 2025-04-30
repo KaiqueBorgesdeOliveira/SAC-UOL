@@ -111,27 +111,6 @@
                         </button>
                     </div>
                 </div>
-                <div class="banner-propagandas">
-                    <h3>Navegue pelos produtos</h3>
-                    <div class="produtos-nav">
-                        <div class="produtos-carousel">
-                            <div class="produtos-items" ng-style="{'transform': 'translateX(-' + (currentSlide * 25) + '%)'}">
-                                <div class="produtos-item" ng-repeat="produto in produtos">
-                                    <img ng-src="{{produto.icone}}" alt="{{produto.nome}}">
-                                    <span>{{produto.nome}}</span>
-                                </div>
-                            </div>
-                            <div class="nav-buttons">
-                                <button class="nav-button prev" ng-click="prevSlide()" ng-disabled="currentSlide === 0">
-                                    <span class="material-icons">chevron_left</span>
-                                </button>
-                                <button class="nav-button next" ng-click="nextSlide()" ng-disabled="currentSlide >= produtos.length - itemsPerPage">
-                                    <span class="material-icons">chevron_right</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </section>
 
             <section class="quick-actions">
@@ -170,36 +149,73 @@
                         <!-- Sugestões serão inseridas aqui via JavaScript -->
                     </div>
                 </div>
+
+                <div class="faq-box">
+                    <div class="faq-title">
+                        <span class="faq-title-bar"></span>
+                        <span>Navegue pelas perguntas frequentes</span>
+                    </div>
+                    <ul class="faq-list">
+                        <li class="faq-item">Como trocar a senha do meu e-mail? <span class="material-icons">chevron_right</span></li>
+                        <li class="faq-item">Esqueci minha senha de acesso. O que faço? <span class="material-icons">chevron_right</span></li>
+                        <li class="faq-item">Por que meus e-mails não estão sendo enviados? <span class="material-icons">chevron_right</span></li>
+                        <li class="faq-item">Como figurar filtros para os e-mails recebidos? <span class="material-icons">chevron_right</span></li>
+                        <li class="faq-item">Como configurar o redirecionamento de e-mails para outros endereços de e-mails. <span class="material-icons">chevron_right</span></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="banner-propagandas">
+                <div class="faq-title produtos-title">
+                    <span class="faq-title-bar"></span>
+                    <span>Navegue pelos produtos</span>
+                </div>
+                <div class="produtos-nav">
+                    <div class="produtos-carousel">
+                        <div class="produtos-items" ng-style="{'transform': 'translateX(-' + (currentSlide * 25) + '%)'}">
+                            <div class="produtos-item" ng-repeat="produto in produtos">
+                                <img ng-src="{{produto.icone}}" alt="{{produto.nome}}">
+                                <span>{{produto.nome}}</span>
+                            </div>
+                        </div>
+                        <div class="nav-buttons">
+                            <button class="nav-button prev" ng-click="prevSlide()" ng-disabled="currentSlide === 0">
+                                <span class="material-icons">chevron_left</span>
+                            </button>
+                            <button class="nav-button next" ng-click="nextSlide()" ng-disabled="currentSlide >= produtos.length - itemsPerPage">
+                                <span class="material-icons">chevron_right</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <div class="app-download">
-                <div class="app-container">
-                    <div class="app-info">
-                        <img src="assets/images/icon-app.svg" alt="Ícone do App">
-                        <div class="app-text">
-                            <h3>Baixe agora o App Meu UOL</h3>
-                            <p>e facilite seu dia a dia!</p>
+                <div class="app-download-banner novo-layout">
+                    <img src="assets/images/codigo-barras.png" alt="QR Code para download" class="qr-code" />
+                    <div class="app-download-center">
+                        <img src="assets/images/icone-phone-cel.svg" alt="Celular" class="icon-phone" />
+                        <div class="app-download-text">
+                            Baixe agora o <strong>App <span>Meu UOL</span></strong><br>
+                            <span class="subtitle">e facilite seu dia a dia!</span>
                         </div>
                     </div>
-                    <div class="app-qr">
-                        <img src="assets/images/qr-code.png" alt="QR Code para download">
-                        <p>Escaneie o QR Code</p>
-                    </div>
-                    <div class="app-stores">
-                        <a href="https://play.google.com/store/apps/details?id=br.com.uol" target="_blank">
-                            <img src="assets/images/google-play-badge.png" alt="Disponível no Google Play" class="store-badge">
+                    <div class="app-download-buttons">
+                        <a href="https://play.google.com/store" target="_blank">
+                            <img src="assets/images/google-play.png" alt="Disponível no Google Play" />
                         </a>
-                        <a href="https://apps.apple.com/br/app/uol/id333529141" target="_blank">
-                            <img src="assets/images/app-store-badge.png" alt="Baixar na App Store" class="store-badge">
+                        <a href="https://apps.apple.com" target="_blank">
+                            <img src="assets/images/app-store.png" alt="Baixar na App Store" />
                         </a>
                     </div>
                 </div>
             </div>
 
             <div class="more-info">
-                <button type="button">
-                    Mais informações
-                    <span class="material-icons">expand_more</span>
+                <button type="button" class="more-info-btn">
+                    <span class="more-info-text">Mais informações</span>
+                    <span class="material-icons more-info-icon">expand_less</span>
+                    <span class="more-info-underline"></span>
                 </button>
             </div>
 
