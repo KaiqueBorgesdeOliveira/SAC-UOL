@@ -46,33 +46,28 @@ index.html         # Página principal
 README.md
 ```
 
-## 🎨 Guia de Estilo
-Cores Principais:
+## Funcionalidades Implementadas
 
-- #FFBA00 (Amarelo UOL)
-- #FF6600 (Laranja UOL)
-- #333333 (Texto)
-- #F5F5F5 (Fundo)
+- Layout responsivo
+- Menu de navegação
+- Carrossel de banners
+- Grid de ações rápidas
+- Campo de busca
+- Loader para carregamento
+- Integração com AngularJS
 
-Tipografia:
+## Dependências
 
-- 'UOLText', Arial, sans-serif (Principal)
-- 16px base (Desktop)
+- AngularJS 1.x
+- Bootstrap (para alguns componentes)
+- jQuery (para algumas funcionalidades do Bootstrap)
 
-## 📌 Roadmap de Melhorias
-- Implementar modo escuro
-- Adicionar internacionalização (i18n)
-- Integrar com API real do UOL
-- Adicionar testes E2E
+## Como Executar
 
-## 🤝 Como Contribuir
-- Faça um fork do projeto
-- Crie sua branch (`git checkout -b feature/nova-feature`)
-- Commit suas mudanças (`git commit -m 'Adiciona nova feature'`)
-- Push para a branch (`git push origin feature/nova-feature`)
-- Abra um Pull Request
+1. Clone este repositório
+2. Abra o arquivo `index.html` em um servidor web local
+3. O site deve estar funcionando corretamente
 
-## 📄 Licença
-Este projeto está sob a licença MIT - veja o arquivo LICENSE para detalhes.
+## Observações
 
-Nota: Este README será atualizado conforme o projeto evolui. Última atualização: 16/04/2025
+Este é um clone visual do SAC UOL, criado apenas para fins de estudo. As funcionalidades são simuladas e não há integração real com backend. 

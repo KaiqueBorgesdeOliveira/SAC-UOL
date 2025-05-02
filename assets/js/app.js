@@ -176,32 +176,28 @@ angular.element(document).ready(function() {
     adjustLayout();
 
     // --- Mais informações (expandir/recolher footer) ---
-    const $moreInfoBtn = $('.more-info button');
+    const $moreInfoBtn = $('.more-info-btn');
     const $footerLinks = $('.footer-links');
-    const $icon = $('.more-info .material-icons');
+    const $icon = $('.more-info .more-info-icon');
 
-    // Defina aqui o estado inicial: true = expandido, false = recolhido
+    // Estado inicial: true = expandido, false = recolhido
     let isFooterOpen = false;
 
     function setFooterState(open) {
         if (open) {
             $footerLinks.show();
-            $icon.text('expand_more');
+            $icon.text('expand_less');
+            $moreInfoBtn.addClass('open');
         } else {
             $footerLinks.hide();
-            $icon.text('expand_less');
+            $icon.text('expand_more');
+            $moreInfoBtn.removeClass('open');
         }
     }
 
     function toggleFooterLinks() {
         isFooterOpen = !isFooterOpen;
-        if (isFooterOpen) {
-            $footerLinks.slideDown(250);
-            $icon.text('expand_more');
-        } else {
-            $footerLinks.slideUp(250);
-            $icon.text('expand_less');
-        }
+        setFooterState(isFooterOpen);
     }
 
     // Estado inicial
@@ -209,7 +205,6 @@ angular.element(document).ready(function() {
 
     $moreInfoBtn.on('click', function(e) {
         e.preventDefault();
-        console.log('Botão Mais informações clicado');
         toggleFooterLinks();
     });
 }); 

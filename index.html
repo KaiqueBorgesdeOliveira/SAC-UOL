@@ -14,39 +14,45 @@
 </head>
 <body ng-app="uolsacApp" ng-controller="MainController">
     <div class="container">
-        <nav class="top-nav">
-            <div class="top-nav-content">
-                <a href="https://www.uol.com.br" class="main-logo">
-                    <img src="assets/images/Logo-Uol.png" alt="UOL">
+        <div class="custom-uol-bar">
+            <a href="https://www.uol.com.br/" target="_blank" rel="noopener" class="uol-logo-link">
+                <img src="assets/images/io-logouol.svg" alt="UOL" class="uol-logo-svg" />
+            </a>
+            <nav class="custom-uol-nav">
+                <a href="#" class="nav-link">INGRESSO.COM</a>
+                <a href="#" class="nav-link">UOL HOST</a>
+                <a href="#" class="nav-link">PAGBANK</a>
+                <a href="#" class="nav-link">CURSOS</a>
+                <a href="#" class="nav-link">UOL PLAY</a>
+                <a href="#" class="nav-link">UOL ADS</a>
+            </nav>
+            <div class="uol-bar-actions">
+                <a href="#" class="bar-action">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="10" cy="10" r="7" stroke="#fff" stroke-width="2"/>
+                      <line x1="16" y1="16" x2="20" y2="20" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <span>BUSCA</span>
                 </a>
-                <div class="nav-links">
-                    <a href="#" class="nav-link">INGRESSO.COM</a>
-                    <a href="#" class="nav-link">UOL HOST</a>
-                    <a href="#" class="nav-link">PAGBANK</a>
-                    <a href="#" class="nav-link">CURSOS</a>
-                    <a href="#" class="nav-link">UOL PLAY</a>
-                    <a href="#" class="nav-link">UOL ADS</a>
-                </div>
-                <div class="user-actions">
-                    <a href="#" class="search-link">
-                        <span class="material-icons">search</span>
-                        BUSCA
-                    </a>
-                    <a href="#" class="chat-link">
-                        <span class="material-icons">chat</span>
-                        BATE-PAPO
-                    </a>
-                    <a href="#" class="email-link">
-                        <span class="material-icons">email</span>
-                        EMAIL
-                    </a>
-                </div>
-                <button class="menu-toggle">
-                    <span class="material-icons">menu</span>
-                </button>
+                <a href="#" class="bar-action">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="3" y="4" width="16" height="12" rx="4" stroke="#fff" stroke-width="2"/>
+                      <path d="M7 16L7.5 18C7.7 18.8 8.3 19 9 19H13C13.7 19 14.3 18.8 14.5 18L15 16" stroke="#fff" stroke-width="2"/>
+                      <circle cx="8" cy="10" r="1" fill="#fff"/>
+                      <circle cx="11" cy="10" r="1" fill="#fff"/>
+                      <circle cx="14" cy="10" r="1" fill="#fff"/>
+                    </svg>
+                    <span>BATE-PAPO</span>
+                </a>
+                <a href="#" class="bar-action">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="3" y="6" width="16" height="10" rx="2" stroke="#fff" stroke-width="2"/>
+                      <path d="M5 8L11 13L17 8" stroke="#fff" stroke-width="2"/>
+                    </svg>
+                    <span>EMAIL</span>
+                </a>
             </div>
-        </nav>
-
+        </div>
         <header class="menu-header">
             <div class="menu-header-content">
                 <div class="logo">
@@ -146,7 +152,6 @@
                         <span class="material-icons">search</span>
                     </button>
                     <div class="search-suggestions" ng-show="searchQuery">
-                        <!-- Sugestões serão inseridas aqui via JavaScript -->
                     </div>
                 </div>
 
