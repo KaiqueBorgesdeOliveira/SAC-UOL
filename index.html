@@ -179,8 +179,10 @@
                     <div class="produtos-carousel">
                         <div class="produtos-items" ng-style="{'transform': 'translateX(-' + (currentSlide * 25) + '%)'}">
                             <div class="produtos-item" ng-repeat="produto in produtos">
-                                <img ng-src="{{produto.icone}}" alt="{{produto.nome}}">
-                                <span>{{produto.nome}}</span>
+                                <div class="produto-card">
+                                    <img ng-src="{{produto.icone}}" alt="{{produto.nome}}">
+                                    <div class="produto-nome">{{produto.nome}}</div>
+                                </div>
                             </div>
                         </div>
                         <div class="nav-buttons">
@@ -254,23 +256,6 @@
                         <li><a href="#">Cartilha de segurança</a></li>
                         <li><a href="#">Central de segurança</a></li>
                     </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Redes Sociais</h3>
-                    <div class="social-links">
-                        <a href="#" class="social-link">
-                            <img src="assets/images/facebook.svg" alt="Facebook">
-                        </a>
-                        <a href="#" class="social-link">
-                            <img src="assets/images/twitter.svg" alt="Twitter">
-                        </a>
-                        <a href="#" class="social-link">
-                            <img src="assets/images/instagram.svg" alt="Instagram">
-                        </a>
-                        <a href="#" class="social-link">
-                            <img src="assets/images/youtube.svg" alt="YouTube">
-                        </a>
-                    </div>
                 </div>
             </div>
 
