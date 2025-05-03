@@ -9,46 +9,97 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=UOLText:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body ng-app="uolsacApp" ng-controller="MainController">
     <div class="container">
-        <nav class="top-nav">
-            <div class="top-nav-content">
-                <a href="https://www.uol.com.br" class="main-logo">
-                    <img src="https://sac.uol.com.br/uol.png" alt="UOL - O melhor conteúdo">
+        <div class="custom-uol-bar">
+            <a href="https://www.uol.com.br/" target="_blank" rel="noopener" class="uol-logo-link">
+                <img src="assets/images/io-logouol.svg" alt="UOL" class="uol-logo-svg" />
+            </a>
+            <nav class="custom-uol-nav">
+                <a href="#" class="nav-link">INGRESSO.COM</a>
+                <a href="#" class="nav-link">UOL HOST</a>
+                <a href="#" class="nav-link">PAGBANK</a>
+                <a href="#" class="nav-link">CURSOS</a>
+                <a href="#" class="nav-link">UOL PLAY</a>
+                <a href="#" class="nav-link">UOL ADS</a>
+            </nav>
+            <div class="uol-bar-actions">
+                <a href="#" class="bar-action">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="10" cy="10" r="7" stroke="#fff" stroke-width="2"/>
+                      <line x1="16" y1="16" x2="20" y2="20" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <span>BUSCA</span>
                 </a>
-                <div class="nav-links">
-                    <a href="#" class="nav-link">INGRESSO.COM</a>
-                    <a href="#" class="nav-link">UOL HOST</a>
-                    <a href="#" class="nav-link">PAGBANK</a>
-                    <a href="#" class="nav-link">CURSOS</a>
-                    <a href="#" class="nav-link">UOL PLAY</a>
-                    <a href="#" class="nav-link">UOL ADS</a>
-                </div>
-                <div class="user-actions">
-                    <a href="#" class="search-link">BUSCA</a>
-                    <a href="#" class="chat-link">BATE-PAPO</a>
-                    <a href="#" class="email-link">EMAIL</a>
-                </div>
+                <a href="#" class="bar-action">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="3" y="4" width="16" height="12" rx="4" stroke="#fff" stroke-width="2"/>
+                      <path d="M7 16L7.5 18C7.7 18.8 8.3 19 9 19H13C13.7 19 14.3 18.8 14.5 18L15 16" stroke="#fff" stroke-width="2"/>
+                      <circle cx="8" cy="10" r="1" fill="#fff"/>
+                      <circle cx="11" cy="10" r="1" fill="#fff"/>
+                      <circle cx="14" cy="10" r="1" fill="#fff"/>
+                    </svg>
+                    <span>BATE-PAPO</span>
+                </a>
+                <a href="#" class="bar-action">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="3" y="6" width="16" height="10" rx="2" stroke="#fff" stroke-width="2"/>
+                      <path d="M5 8L11 13L17 8" stroke="#fff" stroke-width="2"/>
+                    </svg>
+                    <span>EMAIL</span>
+                </a>
             </div>
-        </nav>
-
+        </div>
         <header class="menu-header">
             <div class="menu-header-content">
                 <div class="logo">
-                    <a href="/">
-                        <img src="assets/images/Logo SAC.svg" alt="SAC UOL">
-                    </a>
+                    <a href="/"><img src="assets/images/Logo SAC.svg" alt="SAC UOL"></a>
                 </div>
                 <nav>
-                    <a href="#">Home</a>
-                    <a href="#">Atendimento</a>
-                    <a href="#">Financeiro</a>
-                    <a href="#">Minha conta</a>
+                    <ul style="display: flex; gap: 32px; margin-left: 48px; list-style: none; background: none; border: none;">
+                        <li><a href="#" class="active">Home</a></li>
+                        <li>
+                            <a href="#">Atendimento</a>
+                            <div class="dropdown-menu">
+                                <a href="#">Ajuda</a>
+                                <a href="#">Fale conosco</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Financeiro</a>
+                            <div class="dropdown-menu">
+                                <a href="#">Meus débitos</a>
+                                <a href="#">Meu extrato</a>
+                                <a href="#">2ª via de boleto a vencer</a>
+                                <a href="#">Meios de pagamento</a>
+                                <a href="#">Comprovante de quitação</a>
+                                <a href="#">Dados de recebimento</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Minha conta</a>
+                            <div class="dropdown-menu">
+                                <a href="#">Alterar senha</a>
+                                <a href="#">Meus dados</a>
+                                <a href="#">Meus benefícios</a>
+                                <a href="#">Meus produtos</a>
+                                <a href="#">Cartilha de segurança</a>
+                            </div>
+                        </li>
+                    </ul>
                 </nav>
                 <div class="right-menu">
-                    <a href="#" class="help-link">Ajuda</a>
-                    <a href="#" class="login-link">Entrar</a>
+                    <a href="#" class="help-link">
+                        <img src="assets/images/Icone-ajuda-28x28px.svg" alt="Ajuda" style="width:28px;height:28px;">
+                        Ajuda
+                    </a>
+                    <a href="#" class="login-link">
+                        <img src="assets/images/Icone perfil.svg" alt="Perfil" style="width:28px;height:28px;">
+                        {{userName}}
+                    </a>
                 </div>
             </div>
         </header>
@@ -56,7 +107,15 @@
         <main>
             <section class="hero-banner">
                 <div class="banner-carousel">
-                    <img src="assets/images/Banner.png" alt="Até 20% OFF em produtos LG">
+                    <img id="banner-image" src="assets/images/Banner.png" alt="Banner UOL">
+                    <div class="banner-controls">
+                        <button class="prev-banner">
+                            <span class="material-icons">chevron_left</span>
+                        </button>
+                        <button class="next-banner">
+                            <span class="material-icons">chevron_right</span>
+                        </button>
+                    </div>
                 </div>
             </section>
 
@@ -79,7 +138,7 @@
                         <h3>2ª via de boleto</h3>
                     </a>
                     <a href="#" class="action-item">
-                        <img src="assets/images/Icone-meios-de-pagamento-60x60px.svg" alt="Ícone Recuperar Senha">
+                        <img src="assets/images/Icone Alterar senha.svg" alt="Ícone Recuperar Senha">
                         <h3>Recuperar Senha</h3>
                     </a>
                 </div>
@@ -89,29 +148,128 @@
                 <h2>Olá, como podemos te ajudar?</h2>
                 <div class="search-box">
                     <input type="text" placeholder="Digite aqui a sua dúvida..." ng-model="searchQuery">
-                    <button type="button" ng-click="search(searchQuery)">Buscar</button>
+                    <button type="button" ng-click="search(searchQuery)">
+                        <span class="material-icons">search</span>
+                    </button>
+                    <div class="search-suggestions" ng-show="searchQuery">
+                    </div>
+                </div>
+
+                <div class="faq-box">
+                    <div class="faq-title">
+                        <span class="faq-title-bar"></span>
+                        <span>Navegue pelas perguntas frequentes</span>
+                    </div>
+                    <ul class="faq-list">
+                        <li class="faq-item">Como trocar a senha do meu e-mail? <span class="material-icons">chevron_right</span></li>
+                        <li class="faq-item">Esqueci minha senha de acesso. O que faço? <span class="material-icons">chevron_right</span></li>
+                        <li class="faq-item">Por que meus e-mails não estão sendo enviados? <span class="material-icons">chevron_right</span></li>
+                        <li class="faq-item">Como figurar filtros para os e-mails recebidos? <span class="material-icons">chevron_right</span></li>
+                        <li class="faq-item">Como configurar o redirecionamento de e-mails para outros endereços de e-mails. <span class="material-icons">chevron_right</span></li>
+                    </ul>
                 </div>
             </section>
 
-            <section class="app-download">
-                <div class="app-container">
-                    <div class="app-info">
-                        <img src="assets/images/Icone-meus-produtos-60x60px.svg" alt="Ícone do App Meu UOL">
-                        <div class="app-text">
-                            <h3>Baixe agora o App Meu UOL</h3>
-                            <p>e facilite seu dia a dia!</p>
+            <section class="banner-propagandas">
+                <div class="faq-title produtos-title">
+                    <span class="faq-title-bar"></span>
+                    <span>Navegue pelos produtos</span>
+                </div>
+                <div class="produtos-nav">
+                    <div class="produtos-carousel">
+                        <div class="produtos-items" ng-style="{'transform': 'translateX(-' + (currentSlide * 25) + '%)'}">
+                            <div class="produtos-item" ng-repeat="produto in produtos">
+                                <div class="produto-card">
+                                    <img ng-src="{{produto.icone}}" alt="{{produto.nome}}">
+                                    <div class="produto-nome">{{produto.nome}}</div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="app-stores">
-                        <a href="https://play.google.com/store/apps/details?id=br.com.uol" target="_blank">
-                            <img src="assets/images/google-play-badge.png" alt="Disponível no Google Play" class="store-badge">
-                        </a>
-                        <a href="https://apps.apple.com/br/app/uol/id333529141" target="_blank">
-                            <img src="assets/images/app-store-badge.png" alt="Baixar na App Store" class="store-badge">
-                        </a>
+                        <div class="nav-buttons">
+                            <button class="nav-button prev" ng-click="prevSlide()" ng-disabled="currentSlide === 0">
+                                <span class="material-icons">chevron_left</span>
+                            </button>
+                            <button class="nav-button next" ng-click="nextSlide()" ng-disabled="currentSlide >= produtos.length - itemsPerPage">
+                                <span class="material-icons">chevron_right</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </section>
+
+            <div class="app-download">
+                <div class="app-download-banner novo-layout">
+                    <img src="assets/images/codigo-barras.png" alt="QR Code para download" class="qr-code" />
+                    <div class="app-download-center">
+                        <img src="assets/images/icone-phone-cel.svg" alt="Celular" class="icon-phone" />
+                        <div class="app-download-text">
+                            Baixe agora o <strong>App <span>Meu UOL</span></strong><br>
+                            <span class="subtitle">e facilite seu dia a dia!</span>
+                        </div>
+                    </div>
+                    <div class="app-download-buttons">
+                        <a href="https://play.google.com/store" target="_blank">
+                            <img src="assets/images/google-play.png" alt="Disponível no Google Play" />
+                        </a>
+                        <a href="https://apps.apple.com" target="_blank">
+                            <img src="assets/images/app-store.png" alt="Baixar na App Store" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="more-info">
+                <button type="button" class="more-info-btn">
+                    <span class="more-info-text">Mais informações</span>
+                    <span class="material-icons more-info-icon">expand_less</span>
+                    <span class="more-info-underline"></span>
+                </button>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Atendimento</h3>
+                    <ul>
+                        <li><a href="#">Fale conosco</a></li>
+                        <li><a href="#">Ouvidoria Produtos Digitais</a></li>
+                        <li><a href="#">Ouvidoria UOL Host</a></li>
+                        <li><a href="#">Perguntas frequentes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Financeiro</h3>
+                    <ul>
+                        <li><a href="#">Meus débitos</a></li>
+                        <li><a href="#">Meu extrato</a></li>
+                        <li><a href="#">2ª Via de boleto a vencer</a></li>
+                        <li><a href="#">Meios de pagamento</a></li>
+                        <li><a href="#">Comprovante de quitação</a></li>
+                        <li><a href="#">Dados de recebimento</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Minha conta</h3>
+                    <ul>
+                        <li><a href="#">Alterar senha</a></li>
+                        <li><a href="#">Meus dados</a></li>
+                        <li><a href="#">Meus produtos</a></li>
+                        <li><a href="#">Cartilha de segurança</a></li>
+                        <li><a href="#">Central de segurança</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <footer class="footer-info">
+                <p>Sua senha é secreta. Nenhum funcionário a serviço do UOL está autorizado a solicitá-la.</p>
+                <div class="links">
+                    <a href="#">Regras de uso</a>
+                    <a href="#">Política antispam</a>
+                    <a href="#">Crimes virtuais: denuncie</a>
+                    <a href="#">Normas de Segurança e privacidade</a>
+                </div>
+                <p class="company-info">© 1996 - 2025 - UOL - O melhor conteúdo. Todos os direitos reservados.</p>
+                <p class="company-info">UNIVERSO ONLINE S/A - CNPJ/MF 01.109.184/0001-95 - Av. Brigadeiro Faria Lima, 1.384, São Paulo/SP - CEP 01452-002 - uol.com.br/sac</p>
+            </footer>
         </main>
     </div>
 
