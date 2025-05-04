@@ -931,13 +931,12 @@ nav a:hover::after {
 }
 
 /* Responsividade */
-@media (max-width: 1978px) {
-    body {
-        margin: 0;
-    }
-}
-
 @media (max-width: 1366px) {
+    .container {
+        width: 95%;
+        margin: 0 auto;
+    }
+    
     .top-nav-content,
     .menu-header-content,
     .banner-carousel,
@@ -946,178 +945,107 @@ nav a:hover::after {
     .search-box {
         margin: 0 16px;
     }
-
-    .app-download {
-        width: calc(100% - 276px);
-        margin-left: 138px;
-        margin-right: 138px;
-    }
-
-    .banner-propagandas {
-        display: none;
-    }
-
-    .main-logo {
-        margin-left: 50px;
-    }
-    
-    .user-actions {
-        margin-right: 50px;
-    }
 }
 
-@media (max-width: 768px) {
-    body {
-        margin: 0;
+@media (max-width: 992px) {
+    .menu-toggle {
+        display: block;
     }
 
-    .nav-links {
+    .menu-header nav {
         display: none;
-    }
-
-    .nav-links.active {
-        display: flex;
-        flex-direction: column;
         position: absolute;
         top: 100%;
         left: 0;
         right: 0;
         background: var(--uol-white);
-        padding: 20px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        padding: 16px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         z-index: 1000;
     }
     
-    .menu-toggle {
+    .menu-header nav.active {
         display: block;
     }
 
     .action-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
-    .app-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
-
-    .footer-links {
-        flex-direction: column;
-        align-items: center;
-        gap: 32px;
-        max-width: 98vw;
-    }
-
-    .footer-column {
-        min-width: 0;
-    }
-
-    .nav-link {
-        padding: 10px 0;
-    }
-    
-    .user-actions {
-        display: none;
-    }
-    
-    .user-actions.active {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        margin-right: 0;
-    }
-
-    .main-logo {
-        margin-left: 15px;
-    }
-    
-    .user-actions {
-        margin-right: 15px;
-    }
-
-    .banner-carousel {
-        aspect-ratio: 16 / 4.5;
-    }
-    
-    .banner-carousel img {
-        padding: 8px;
-    }
 }
 
-@media (max-width: 480px) {
-    .user-actions span:not(.material-icons) {
-        display: none;
+@media (max-width: 768px) {
+    .container {
+        width: 98%;
+        margin: 16px auto;
+        padding: 16px 8px;
     }
 
-    .right-menu span:not(.material-icons) {
-        display: none;
+    .menu-header nav {
+        flex-direction: column;
+        gap: 16px;
     }
 
     .action-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .produtos-item {
-        flex: 0 0 100%;
-    }
-    
-    .nav-buttons {
-        display: none;
-    }
-    
-    .footer-links {
-        flex-direction: column;
-        align-items: center;
-        gap: 32px;
-        max-width: 98vw;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
     }
 
-    .footer-column {
-        min-width: 0;
-    }
-
-    .app-container {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .app-qr {
-        margin: 20px 0;
-    }
-    
-    .footer-info .links {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .banner-carousel {
-        aspect-ratio: 16 / 5;
-    }
-    
-    .banner-carousel img {
-        padding: 5px;
-    }
-}
-
-@media (max-width: 900px) {
     .app-download-banner.novo-layout {
         flex-direction: column;
         align-items: center;
-        gap: 18px;
-        padding: 18px 6px;
+        gap: 16px;
+        padding: 16px;
     }
-    .app-download-banner.novo-layout .qr-code {
-        margin: 0 auto;
-    }
+
     .app-download-center {
         flex-direction: column;
-        gap: 10px;
+        gap: 8px;
         text-align: center;
     }
-    .app-download-banner.novo-layout .app-download-buttons {
-        margin-left: 0;
+
+    .footer-links {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+}
+
+@media (max-width: 576px) {
+    .action-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .action-item {
+        flex-direction: row;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .action-item img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .help-search h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .search-box input {
+        font-size: 14px;
+    }
+
+    .faq-item {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: 16px;
     }
 }
 
@@ -1249,7 +1177,7 @@ input:active, input:focus, textarea:active, textarea:focus, select:active, selec
 
 /* Barra preta institucional customizada */
 .custom-uol-bar {
-    width: 100%;
+        width: 100%;
     background: #232323;
     display: flex;
     align-items: center;
