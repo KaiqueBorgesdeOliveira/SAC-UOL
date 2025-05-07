@@ -492,6 +492,7 @@ nav a:hover::after {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     padding: 20px;
+    width: 100%;
 }
 
 .action-item {
@@ -550,9 +551,13 @@ nav a:hover::after {
 }
 
 .search-box {
-    max-width: 600px;
+    max-width: 900px;
+    width: 100%;
     margin: 20px auto;
     position: relative;
+    box-sizing: border-box;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .search-box input {
@@ -1167,6 +1172,11 @@ nav a:hover::after {
     .faq-box, .banner-propagandas {
         max-width: 98vw;
     }
+    .search-box {
+        max-width: 98vw;
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 input:active, input:focus, textarea:active, textarea:focus, select:active, select:focus {
@@ -1309,4 +1319,78 @@ input:active, input:focus, textarea:active, textarea:focus, select:active, selec
     .custom-uol-nav {
         gap: 8px;
     }
+}
+
+/* =============================
+   Sessão: Não encontrou o que precisava?
+   ============================= */
+.nao-encontrou {
+    margin: 48px auto 32px auto;
+    text-align: left;
+    max-width: 900px;
+    padding: 0 16px;
+}
+.nao-encontrou h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.nao-encontrou-botoes {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.nao-encontrou-btn {
+    flex: 1 1 0;
+    width: auto;
+    min-width: 0;
+    max-width: 533px;
+    height: 68px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px #00000029;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 1.1rem;
+    color: #333;
+    text-decoration: none;
+    transition: box-shadow 0.2s;
+    box-sizing: border-box;
+}
+.nao-encontrou-btn:hover {
+    box-shadow: 0 6px 16px #00000029;
+}
+.nao-encontrou-icone {
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+}
+@media (max-width: 1200px) {
+    .nao-encontrou-botoes {
+        flex-direction: column;
+        gap: 16px;
+        align-items: stretch;
+        max-width: 100%;
+    }
+    .nao-encontrou-btn {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+.sessao-centralizada {
+    max-width: 1366px;
+    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 100%;
+    box-sizing: border-box;
 } 
