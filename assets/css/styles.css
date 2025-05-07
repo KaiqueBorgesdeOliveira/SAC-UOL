@@ -24,7 +24,6 @@ html, body {
     padding: 0;
 }
 
-/* Container principal */
 .container {
     background: #fff;
     box-shadow: 0 8px 32px rgba(0,0,0,0.18);
@@ -35,7 +34,6 @@ html, body {
     padding: 24px 12px;
 }
 
-/* Top Navigation */
 .top-nav {
     background: var(--uol-dark);
     border-bottom: 1px solid #E5E5E5;
@@ -185,7 +183,6 @@ html, body {
     font-size: 24px;
 }
 
-/* Menu Header */
 .menu-header {
     background: var(--uol-white);
     padding: 15px 0;
@@ -315,7 +312,6 @@ nav a:hover::after {
     background: var(--uol-yellow);
 }
 
-/* Hero Banner */
 .hero-banner {
     position: relative;
     margin: 0;
@@ -377,7 +373,6 @@ nav a:hover::after {
     background: var(--uol-white);
 }
 
-/* Produtos Carousel */
 .banner-propagandas {
     margin-top: 30px;
 }
@@ -482,7 +477,6 @@ nav a:hover::after {
     cursor: not-allowed;
 }
 
-/* Quick Actions */
 .quick-actions {
     padding: 40px 0;
 }
@@ -526,7 +520,6 @@ nav a:hover::after {
     filter: brightness(1.1) sepia(1) saturate(5) hue-rotate(-20deg) drop-shadow(0 0 2px var(--uol-yellow));
 }
 
-/* Efeito hover amarelo para ícones de ajuda/perfil */
 .help-link img,
 .login-link img {
     transition: filter 0.3s;
@@ -538,7 +531,6 @@ nav a:hover::after {
     filter: brightness(1.1) sepia(1) saturate(5) hue-rotate(-20deg) drop-shadow(0 0 2px var(--uol-yellow));
 }
 
-/* Help Search */
 .help-search {
     text-align: center;
     padding: 40px 0;
@@ -598,7 +590,6 @@ nav a:hover::after {
     z-index: 1000;
 }
 
-/* Sugestões de Busca */
 .suggestion-item {
     display: flex;
     align-items: center;
@@ -622,7 +613,6 @@ nav a:hover::after {
     font-size: 14px;
 }
 
-/* App Download */
 .app-download {
     background: none;
     padding: 40px 0;
@@ -737,7 +727,6 @@ nav a:hover::after {
     height: 40px;
 }
 
-/* Footer */
 .footer-links {
     background: #fff;
     border-radius: 0 0 16px 16px;
@@ -756,7 +745,7 @@ nav a:hover::after {
     flex: 1 1 0;
     min-width: 180px;
     display: block;
-    align-items: flex-start;
+    padding: 0;
 }
 
 .footer-column h3 {
@@ -767,14 +756,12 @@ nav a:hover::after {
     line-height: 1.5;
     display: block;
     margin-right: 0;
-    vertical-align: top;
 }
 
 .footer-column ul {
     text-align: left;
     margin: 0;
     display: block;
-    vertical-align: top;
     padding: 0;
 }
 
@@ -870,7 +857,6 @@ nav a:hover::after {
     line-height: 1.4;
 }
 
-/* Mais informações */
 .more-info {
     text-align: center;
     margin: 24px 0;
@@ -935,7 +921,6 @@ nav a:hover::after {
     }
 }
 
-/* Responsividade */
 @media (max-width: 1366px) {
     .container {
         width: 95%;
@@ -1185,7 +1170,6 @@ input:active, input:focus, textarea:active, textarea:focus, select:active, selec
     outline: none;
 }
 
-/* Barra preta institucional customizada */
 .custom-uol-bar {
         width: 100%;
     background: #232323;
@@ -1262,7 +1246,6 @@ input:active, input:focus, textarea:active, textarea:focus, select:active, selec
 .bar-action:hover svg,
 .bar-action:focus svg {
     filter: brightness(1.1) sepia(1) saturate(5) hue-rotate(-20deg) drop-shadow(0 0 2px var(--uol-yellow));
-    /* Para browsers que suportam, também troca o stroke */
 }
 
 .bar-action:hover svg *,
@@ -1321,9 +1304,6 @@ input:active, input:focus, textarea:active, textarea:focus, select:active, selec
     }
 }
 
-/* =============================
-   Sessão: Não encontrou o que precisava?
-   ============================= */
 .nao-encontrou {
     margin: 48px auto 32px auto;
     text-align: left;

@@ -1,43 +1,34 @@
-// Módulo principal do SAC UOL
 const uolsacApp = angular.module('uolsacApp', []);
 
-// Configurações do aplicativo
 uolsacApp.config(['$locationProvider', function($locationProvider) {
     $locationProvider.hashPrefix('');
 }]);
 
-// Controller principal
 uolsacApp.controller('MainController', ['$scope', function($scope) {
-    // Estado inicial do loader
     $scope.isLoading = false;
 
-    // Função para mostrar/esconder o loader
     $scope.toggleLoader = function(show) {
         const loader = document.getElementById('loaderCurtain');
         loader.style.display = show ? 'block' : 'none';
         $scope.isLoading = show;
     };
 
-    // Função de busca
     $scope.search = function(query) {
         if (query) {
             console.log('Buscando por:', query);
-            // Implementar lógica de busca aqui
         }
     };
 
-    // Inicialização
+
     $scope.init = function() {
         console.log('Aplicativo SAC UOL iniciado');
     };
 
-    // Chamar inicialização
+
     $scope.init();
 
-    // Dados do usuário
     $scope.userName = 'Kaique';
     
-    // Carrossel de produtos
     $scope.produtos = [
         { nome: 'UOL Mail', icone: 'assets/images/uol-mail.svg' },
         { nome: 'UOL Play', icone: 'assets/images/uol-play.svg' },
@@ -62,12 +53,9 @@ uolsacApp.controller('MainController', ['$scope', function($scope) {
     };
 }]);
 
-// Inicialização quando o documento estiver pronto
 angular.element(document).ready(function() {
-    // Remover classe no-js
     document.documentElement.classList.remove('no-js');
 
-    // Carrossel do banner principal
     let currentBanner = 0;
     const banners = [
         'assets/images/Banner.png',
@@ -97,7 +85,6 @@ angular.element(document).ready(function() {
         updateBanner();
     }, 5000);
     
-    // Autocomplete na busca
     const sugestoes = [
         'Como recuperar minha senha?',
         'Como alterar meu plano?',
@@ -127,7 +114,6 @@ angular.element(document).ready(function() {
         }
     });
     
-    // Efeitos hover nos cards de ação
     $('.action-item').hover(
         function() {
             $(this).find('img').css('transform', 'scale(1.1)');
@@ -137,12 +123,10 @@ angular.element(document).ready(function() {
         }
     );
     
-    // Menu responsivo
     $('.menu-toggle').click(function() {
         $('.nav-links').toggleClass('active');
     });
     
-    // Scroll suave para links internos
     $('a[href^="#"]').click(function(e) {
         e.preventDefault();
         const target = $($(this).attr('href'));
@@ -153,14 +137,12 @@ angular.element(document).ready(function() {
         }
     });
     
-    // Fechar menu ao clicar fora
     $(document).click(function(e) {
         if (!$(e.target).closest('.nav-links, .menu-toggle').length) {
             $('.nav-links').removeClass('active');
         }
     });
     
-    // Ajustar layout em diferentes tamanhos de tela
     function adjustLayout() {
         const width = $(window).width();
         if (width <= 768) {
@@ -175,12 +157,10 @@ angular.element(document).ready(function() {
     $(window).resize(adjustLayout);
     adjustLayout();
 
-    // --- Mais informações (expandir/recolher footer) ---
     const $moreInfoBtn = $('.more-info-btn');
     const $footerLinks = $('.footer-links');
     const $icon = $('.more-info .more-info-icon');
 
-    // Estado inicial: true = expandido, false = recolhido
     let isFooterOpen = false;
 
     function setFooterState(open) {
@@ -200,7 +180,6 @@ angular.element(document).ready(function() {
         setFooterState(isFooterOpen);
     }
 
-    // Estado inicial
     setFooterState(isFooterOpen);
 
     $moreInfoBtn.on('click', function(e) {
