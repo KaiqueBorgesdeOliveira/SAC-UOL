@@ -483,7 +483,7 @@ nav a:hover::after {
 
 .action-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(5, 1fr);
     gap: 20px;
     padding: 20px;
     width: 100%;
@@ -543,7 +543,7 @@ nav a:hover::after {
 }
 
 .search-box {
-    max-width: 900px;
+    max-width: 1100px;
     width: 100%;
     margin: 20px auto;
     position: relative;
@@ -615,8 +615,8 @@ nav a:hover::after {
 
 .app-download {
     background: none;
-    padding: 40px 0;
-    margin: 40px 0;
+    padding: 60px 0;
+    margin: 60px 0;
 }
 
 .app-download-banner.novo-layout {
@@ -625,17 +625,17 @@ nav a:hover::after {
     justify-content: space-between;
     background: #FFD200;
     border-radius: 16px;
-    padding: 24px 32px;
-    margin: 0 auto;
+    padding: 40px 48px;
+    margin: 0 auto 48px auto;
     max-width: 1100px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-    gap: 32px;
+    gap: 48px;
 }
 
 .app-download-banner.novo-layout .qr-code {
-    width: 100px;
-    height: 100px;
-    margin: 0 32px 0 0;
+    width: 120px;
+    height: 120px;
+    margin: 0 48px 0 0;
     flex-shrink: 0;
 }
 
@@ -675,8 +675,8 @@ nav a:hover::after {
 .app-download-banner.novo-layout .app-download-buttons {
     display: flex;
     flex-direction: row;
-    gap: 18px;
-    margin-left: 32px;
+    gap: 24px;
+    margin-left: 48px;
 }
 
 .app-download-banner.novo-layout .app-download-buttons img {
@@ -1082,7 +1082,7 @@ nav a:hover::after {
 }
 
 .faq-box, .banner-propagandas {
-    max-width: 900px;
+    max-width: 1100px;
     margin: 32px auto 0 auto;
 }
 
@@ -1305,9 +1305,9 @@ input:active, input:focus, textarea:active, textarea:focus, select:active, selec
 }
 
 .nao-encontrou {
-    margin: 48px auto 32px auto;
+    margin: 72px auto 32px auto;
     text-align: left;
-    max-width: 900px;
+    max-width: 1100px;
     padding: 0 16px;
 }
 .nao-encontrou h3 {
@@ -1367,10 +1367,9 @@ input:active, input:focus, textarea:active, textarea:focus, select:active, selec
 }
 
 .sessao-centralizada {
-    max-width: 1366px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 0 16px;
     width: 100%;
     box-sizing: border-box;
 } 
