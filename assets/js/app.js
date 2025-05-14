@@ -31,7 +31,7 @@ uolsacApp.controller('MainController', ['$scope', function($scope) {
     
     $scope.produtos = [
         { nome: 'UOL Mail', icone: 'assets/images/uol-mail.svg' },
-        { nome: 'UOL Play', icone: 'assets/images/uol-play.svg' },
+        { nome: 'UOL Play', icone: 'assets/images/uol-play-teste.svg' },
         { nome: 'UOL Assine', icone: 'assets/images/assine-uol.svg' },
         { nome: 'UOL Assistência Técnica', icone: 'assets/images/assistencia-tecnica.svg' },
         { nome: 'Clube UOL', icone: 'assets/images/clube-uol.svg' }
